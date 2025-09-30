@@ -1,0 +1,108 @@
+# Mock Audio Files Information
+# Designer: Abdullah Alawiss
+# Note: These are placeholder descriptions for demo audio files
+
+## Audio Sample Files (Mock)
+
+### 1. good_call_sample.wav
+- **Duration**: 6:42
+- **Quality**: High (44.1kHz, 16-bit)
+- **Speakers**: 2 (Male agent, Female customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Perfect compliance call example
+- **Compliance Score**: 10/10
+- **File Size**: ~5.8 MB
+
+### 2. bad_call_sample.wav  
+- **Duration**: 4:23
+- **Quality**: Medium (22kHz, 16-bit)
+- **Speakers**: 2 (Male agent, Female customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Multiple violations example
+- **Compliance Score**: 1/10
+- **File Size**: ~3.1 MB
+
+### 3. bindingstid_issue.wav
+- **Duration**: 5:15
+- **Quality**: High (44.1kHz, 16-bit)
+- **Speakers**: 2 (Female agent, Male customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Binding period avoidance
+- **Compliance Score**: 3/10
+- **File Size**: ~4.7 MB
+
+### 4. price_transparency_fail.wav
+- **Duration**: 3:45
+- **Quality**: Medium (22kHz, 16-bit)
+- **Speakers**: 2 (Male agent, Female customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Incomplete pricing information
+- **Compliance Score**: 4/10
+- **File Size**: ~2.9 MB
+
+### 5. sales_pressure_high.wav
+- **Duration**: 2:30
+- **Quality**: High (44.1kHz, 16-bit)
+- **Speakers**: 2 (Female agent, Male customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Excessive sales pressure
+- **Compliance Score**: 2/10
+- **File Size**: ~2.2 MB
+
+### 6. gdpr_violation_example.wav
+- **Duration**: 4:15
+- **Quality**: Medium (22kHz, 16-bit)
+- **Speakers**: 2 (Male agent, Female customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: GDPR data collection violations
+- **Compliance Score**: 1/10
+- **File Size**: ~3.2 MB
+
+### 7. excellent_b2b_call.wav
+- **Duration**: 8:30
+- **Quality**: High (44.1kHz, 16-bit)
+- **Speakers**: 2 (Female agent, Male business customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Perfect business-to-business sale
+- **Compliance Score**: 10/10
+- **File Size**: ~7.6 MB
+
+### 8. mediocre_call_improvement.wav
+- **Duration**: 5:45
+- **Quality**: Medium (22kHz, 16-bit)
+- **Speakers**: 2 (Male agent, Female customer)
+- **Language**: Norwegian (Bokmål)
+- **Content**: Acceptable call with room for improvement
+- **Compliance Score**: 6/10
+- **File Size**: ~4.3 MB
+
+## Audio Processing Notes
+
+### For Demo Purposes:
+- These files would normally contain actual Norwegian speech
+- AI transcription would convert speech to text
+- Speaker diarization would identify customer vs agent
+- Compliance analysis would be performed on transcribed text
+
+### Technical Requirements:
+- **Supported Formats**: WAV, MP3, M4A, FLAC
+- **Max File Size**: 50 MB
+- **Recommended Quality**: 16kHz+ for good transcription
+- **Language**: Norwegian (Bokmål/Nynorsk)
+
+### Processing Pipeline:
+1. **Upload**: Audio file uploaded via web interface
+2. **Validation**: File format and size check
+3. **Transcription**: Whisper AI converts speech to text
+4. **Diarization**: Identify different speakers
+5. **Analysis**: Norwegian compliance rule engine
+6. **Redaction**: GDPR-compliant data masking
+7. **Report**: Comprehensive compliance report
+
+---
+
+**Note**: In a production environment, these would be actual audio files. 
+For this demo, the text transcriptions in .txt files represent what 
+would be extracted from the audio files.
+
+**Designer: Abdullah Alawiss**

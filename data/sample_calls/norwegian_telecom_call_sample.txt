@@ -1,0 +1,40 @@
+# Sample Norwegian Telecom Sales Call Transcript
+# Designer: Abdullah Alawiss
+# This is a mock transcript for testing the Norwegian compliance engine
+
+Agent: Hei, dette er Maria fra Telenor. Jeg ringer angående et spesialtilbud på mobilabonnement. Har du tid til å snakke?
+
+Kunde: Ja, det er greit.
+
+Agent: Flott! Vi har et fantastisk tilbud på vårt nye 5G-abonnement med ubegrenset data. Det koster bare 399 kroner i måneden.
+
+Kunde: Det høres dyrt ut. Hva får jeg for det?
+
+Agent: Du får ubegrenset data, fri tale og SMS. Plus tilgang til våre strømmetjenester. Dette tilbudet er kun tilgjengelig i dag, så du må bestemme deg nå.
+
+Kunde: Jeg trenger tid til å tenke...
+
+Agent: Jeg forstår, men jeg kan ikke garantere at prisen vil være den samme i morgen. Våre konkurrenter tar mye mer for lignende tjenester. Du kommer ikke til å finne et bedre tilbud.
+
+Kunde: Er det noen bindingstid?
+
+Agent: Ja, det er en standard avtale. Men ikke bekymre deg for det, alle har det.
+
+Kunde: Hvor lang bindingstid?
+
+Agent: Det er... eh... standard vilkår. Skal vi bare få fullført bestillingen? Jeg har din informasjon her - Ola Nordmann, født 15.03.1985, telefonnummer 91234567?
+
+Kunde: Vent, jeg vil vite nøyaktig hva bindingstiden er.
+
+Agent: La meg få bestillingen din ferdig først, så kan vi gå gjennom detaljene senere. Kan du bekrefte ditt kontonummer, 1234.56.78901?
+
+Kunde: Jeg tror jeg heller vil vente...
+
+Agent: Ok, men husk at dette tilbudet utløper i dag. Ring oss tilbake snart!
+
+# COMPLIANCE ISSUES IN THIS TRANSCRIPT:
+# 1. Bindingstid not clearly disclosed (violation)
+# 2. High pressure sales tactics (violation)
+# 3. Personal information mentioned (GDPR concern)
+# 4. Incomplete price information (no setup fees mentioned)
+# 5. Urgency tactics ("only today", "can't guarantee price tomorrow")

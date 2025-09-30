@@ -1,0 +1,26 @@
+call_id,filename,date,time,duration_seconds,caller_type,customer_gender,agent_gender,operator,product_type,outcome,quality_score,violations,bindingstid_disclosed,price_transparent,sales_pressure_level,gdpr_compliant,notes
+1,norwegian_telecom_call_sample.txt,2024-01-15,09:30:00,298,outbound,female,male,Telenor,mobile_plan,violation,4,bindingstid_missing;price_incomplete,no,partial,medium,yes,Original sample with multiple issues
+2,good_call_compliant.txt,2024-01-15,10:15:00,402,outbound,female,male,Telenor,mobile_plan,success,10,none,yes,yes,low,yes,Perfect compliance example
+3,bad_call_violations.txt,2024-01-15,11:45:00,263,outbound,female,male,TeleCom,premium_plan,violation,1,bindingstid_missing;price_incomplete;excessive_pressure;gdpr_violation;false_marketing,no,no,very_high,no,Multiple serious violations
+4,bindingstid_problem.txt,2024-01-15,13:20:00,315,outbound,male,female,Telia,5g_unlimited,violation,3,bindingstid_missing,no,yes,medium,yes,Specific bindingstid disclosure problem
+5,call_2024_016.wav,2024-01-15,14:10:00,445,outbound,male,male,Telenor,broadband,success,9,none,yes,yes,low,yes,Excellent broadband sale with full compliance
+6,call_2024_017.wav,2024-01-15,14:55:00,189,outbound,female,female,Telia,mobile_plan,violation,2,excessive_pressure;bindingstid_missing,no,partial,very_high,partial,Aggressive sales tactics
+7,call_2024_018.wav,2024-01-15,15:30:00,356,outbound,male,female,Ice,data_plan,success,8,minor_issues,yes,yes,low,yes,Good call with minor room for improvement
+8,call_2024_019.wav,2024-01-15,16:15:00,278,outbound,female,male,Telenor,mobile_plan,violation,3,price_incomplete;sales_pressure,partial,no,high,yes,Price transparency issues
+9,call_2024_020.wav,2024-01-16,09:00:00,512,outbound,male,male,Telia,business_plan,success,10,none,yes,yes,low,yes,Perfect B2B sale
+10,call_2024_021.wav,2024-01-16,09:45:00,334,outbound,female,female,OneCall,prepaid,violation,4,bindingstid_missing,no,yes,medium,partial,Prepaid plan with binding confusion
+11,call_2024_022.wav,2024-01-16,10:30:00,267,outbound,male,female,Telenor,mobile_plan,success,7,minor_issues,yes,partial,low,yes,Good sale but could improve price clarity
+12,call_2024_023.wav,2024-01-16,11:15:00,423,outbound,female,male,Telia,fiber,success,9,none,yes,yes,very_low,yes,Excellent fiber sale
+13,call_2024_024.wav,2024-01-16,12:00:00,156,outbound,male,male,Ice,mobile_plan,violation,2,excessive_pressure;false_marketing,partial,no,very_high,no,Short aggressive call with false claims
+14,call_2024_025.wav,2024-01-16,13:30:00,389,outbound,female,female,Telenor,family_plan,success,8,none,yes,yes,low,yes,Good family plan sale
+15,call_2024_026.wav,2024-01-16,14:20:00,445,outbound,male,female,Telia,premium_plan,violation,3,price_incomplete;gdpr_violation,yes,no,medium,no,GDPR and price issues
+16,call_2024_027.wav,2024-01-16,15:10:00,298,outbound,female,male,OneCall,mobile_plan,success,6,minor_issues,yes,partial,medium,yes,Acceptable sale with room for improvement
+17,call_2024_028.wav,2024-01-16,16:00:00,367,outbound,male,male,Telenor,iot_plan,success,9,none,yes,yes,low,yes,Excellent IoT business sale
+18,call_2024_029.wav,2024-01-17,09:15:00,234,outbound,female,female,Telia,mobile_plan,violation,4,sales_pressure,yes,yes,high,yes,High pressure tactics despite good info
+19,call_2024_030.wav,2024-01-17,10:00:00,456,outbound,male,female,Ice,unlimited_plan,success,8,none,yes,yes,low,yes,Good unlimited data sale
+20,call_2024_031.wav,2024-01-17,10:45:00,312,outbound,female,male,Telenor,mobile_plan,violation,5,bindingstid_missing,no,yes,medium,yes,Missing bindingstid only
+21,call_2024_032.wav,2024-01-17,11:30:00,389,outbound,male,male,Telia,broadband,success,10,none,yes,yes,very_low,yes,Perfect broadband compliance
+22,call_2024_033.wav,2024-01-17,12:15:00,278,outbound,female,female,OneCall,student_plan,success,7,minor_issues,yes,partial,low,yes,Good student discount sale
+23,call_2024_034.wav,2024-01-17,13:00:00,445,outbound,male,female,Telenor,business_plan,violation,2,excessive_pressure;false_marketing;gdpr_violation,partial,no,very_high,no,Multiple serious business sale violations
+24,call_2024_035.wav,2024-01-17,14:30:00,356,outbound,female,male,Telia,5g_plan,success,9,none,yes,yes,low,yes,Excellent 5G upgrade sale
+25,call_2024_036.wav,2024-01-17,15:20:00,223,outbound,male,male,Ice,roaming_plan,violation,4,price_incomplete,yes,no,medium,partial,Roaming plan with price issues

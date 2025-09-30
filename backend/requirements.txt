@@ -1,0 +1,45 @@
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# Redis and Celery
+redis==5.0.1
+celery==5.3.4
+
+# Audio processing
+whisper==1.1.10
+ffmpeg-python==0.2.0
+pyannote.audio==3.1.1
+
+# NLP and analysis
+spacy==3.7.2
+openai==1.3.6
+
+# File handling and storage
+minio==7.2.0
+python-dotenv==1.0.0
+
+# Security and authentication
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Utilities
+pydantic==2.5.0
+httpx==0.25.2
+aiofiles==23.2.1
+
+# GDPR and data handling
+presidio-analyzer==2.2.353
+presidio-anonymizer==2.2.353
+
+# Monitoring
+sentry-sdk[fastapi]==1.38.0
+
+# Designer: Abdullah Alawiss

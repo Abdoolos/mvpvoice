@@ -1,0 +1,120 @@
+# Musteranruf - Bindingstid Problem
+# Designer: Abdullah Alawiss
+# Dato: 2024-01-15
+# Varighet: 5:15
+# Resultat: AVVIST - Manglende bindingstid-informasjon
+
+---
+
+## TRANSKRIPSJON
+
+**Tid: 00:00 - 01:00**
+**Selger (Female):** God morgen! Dette er Kristine fra Telia. Jeg ringer angående et flott tilbud på vårt nye 5G-abonnement. Er du interessert i å høre mer?
+
+**Kunde (Male):** Ja, jeg har faktisk tenkt på å bytte operatør. Hva kan dere tilby?
+
+**Selger:** Fantastisk! Vi har et spesialtilbud på vårt "5G Unlimited" abonnement. Du får ubegrenset data, tale og SMS for kun 599 kroner i måneden. Pluss fri roaming i hele Europa.
+
+**Kunde:** Det høres bra ut. Hvor lenge varer dette tilbudet?
+
+---
+
+**Tid: 01:00 - 02:30**
+**Selger:** Tilbudet er gyldig til slutten av måneden, så du har god tid til å bestemme deg.
+
+**Kunde:** Men jeg mener, hvis jeg takker ja - hvor lenge må jeg ha abonnementet?
+
+**Selger:** **❌ UNNGÅR BINDINGSTID:** Å, det er bare et standard abonnement. Du får alle fordelene med en gang og kan bruke det så lenge du vil.
+
+**Kunde:** Okei, men er det noen bindingsperiode? Kan jeg si opp når som helst?
+
+**Selger:** **❌ VAGT SVAR:** Du kan selvfølgelig endre abonnement hvis du ikke er fornøyd. Vi har mange forskjellige pakker du kan velge mellom.
+
+---
+
+**Tid: 02:30 - 04:00**
+**Kunde:** Det svarte ikke på spørsmålet mitt. Har abonnementet bindingstid eller ikke?
+
+**Selger:** **❌ FORTSATT UNNGÅR:** La meg fortelle deg om alle de fantastiske fordelene i stedet! Du får tilgang til vårt nye 5G-nettverk som er 10 ganger raskere enn 4G. Du kan streame 4K-video uten problemer og...
+
+**Kunde:** [Avbryter] Kristine, jeg trenger å vite om bindingstid før jeg kan vurdere tilbudet.
+
+**Selger:** **❌ NEDSPILLER VIKTIGHET:** Bindingstid er egentlig ikke så viktig når tilbudet er så bra som dette. De fleste kunder holder abonnementet lenger enn bindingsperioden uansett fordi de er så fornøyde.
+
+**Kunde:** Men hvor lang ER bindingsperioden?
+
+---
+
+**Tid: 04:00 - 05:15**
+**Selger:** **❌ MOTVILLIG AVSLØRING:** Eh... jeg tror det er... la meg se... det er vel en standard periode på... hmm... kanskje 18 måneder? Eller var det 24? Jeg må sjekke med min kollega.
+
+**Kunde:** Du er ikke sikker?
+
+**Selger:** **❌ PRØVER Å AVLEDE:** Det viktigste er jo at du får et fantastisk abonnement! Og hvis du takker ja i dag, så legger jeg til gratis mobilforsikring verdt 150 kroner per måned!
+
+**Kunde:** Jeg vil ikke takke ja på noe før jeg vet bindingsperioden.
+
+**Selger:** **❌ FEILAKTIG INFO:** Okei okei, det er 12 måneder. Men som jeg sa, de fleste er så fornøyde at de beholder det mye lenger!
+
+**Kunde:** Er du sikker på 12 måneder?
+
+**Selger:** Ja... eller... la meg sjekke... [pause] Faktisk må jeg ringe deg tilbake med de eksakte detaljene.
+
+**Kunde:** Nei takk. Jeg ringer selv hvis jeg er interessert.
+
+*[Kunde legger på]*
+
+---
+
+## COMPLIANCE ANALYSE
+
+### ❌ HOVEDPROBLEM: BINDINGSTID-BRUDD
+
+#### 1. **UNNGÅR DIREKTE SVAR:**
+- Selger prøver aktivt å unngå bindingstid-spørsmål
+- Svarer ikke direkte på kundens gjentatte spørsmål
+- Forsøker å avlede med andre fordeler
+
+#### 2. **VAGE SVAR:**
+- "Standard abonnement" - ikke spesifikt
+- "Du kan endre abonnement" - ikke samme som oppsigelse
+- Ingen klar informasjon om binding
+
+#### 3. **USIKKERHET OM EGNE VILKÅR:**
+- Selger usikker på 18 vs 24 måneder
+- Endrer til 12 måneder uten sikkerhet
+- Må "sjekke med kollega"
+
+#### 4. **NEDSPILLER VIKTIGHET:**
+- "Bindingstid er egentlig ikke så viktig"
+- Forsøker å få kunde til å se bort fra binding
+- Mangler respekt for kundens informasjonsbehov
+
+### 🚨 REGELBRUDD:
+- **Norsk markedsføringslov § 6:** Krav om klar informasjon
+- **Forbrukerrettsloven:** Rett til bindingstid-informasjon
+- **Tele- og postloven:** Transparens om avtalevilkår
+
+### 📊 KONSEKVENSER:
+- **Kunde mister tillit:** Legger på irritert
+- **Tapt salg:** Ingen avtale inngått
+- **Regulatorisk risiko:** Bruddet kan rapporteres
+- **Omdømme:** Dårlig kundeopplevelse
+
+### 💡 KORREKT TILNÆRMING:
+1. **Oppgi bindingstid umiddelbart** når spurt
+2. **Vær sikker på vilkår** før samtale
+3. **Ikke nedspill viktigheten** av binding
+4. **Respekter kundens informasjonsbehov**
+
+### 📊 KVALITETSSCORE: 3/10
+- Grunnleggende høflighet tilstede
+- Men kritisk svikt i informasjonsplikt
+- Manglende produktkunnskap
+- Brudd på norske regler
+
+---
+
+*Analysert av AI Callcenter Agent*
+*Designer: Abdullah Alawiss*
+*📚 LÆRINGSCASE: Viktigheten av å være klar og direkte om bindingstid*

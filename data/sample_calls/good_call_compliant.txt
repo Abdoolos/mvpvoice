@@ -1,0 +1,92 @@
+# Musteranruf - Regelkonform (Godt eksempel)
+# Designer: Abdullah Alawiss
+# Dato: 2024-01-15
+# Varighet: 6:42
+# Resultat: GODKJENT - Følger alle norske regler
+
+---
+
+## TRANSKRIPSJON
+
+**Tid: 00:00 - 00:30**
+**Selger (Male):** Hei, mitt navn er Lars fra Telenor. Takk for at du tok telefonen. Jeg ringer for å informere deg om våre nye mobilabonnement som kan passe for deg. Har du noen minutter å prate?
+
+**Kunde (Female):** Ja, det er greit. Men jeg har ikke så lang tid.
+
+**Selger:** Det forstår jeg helt. Jeg skal være kort og konkret. 
+
+---
+
+**Tid: 00:30 - 02:00**
+**Selger:** Basert på ditt nåværende forbruk, kan jeg tilby deg vårt "Smart 20GB" abonnement til 449 kroner per måned. Dette inkluderer 20 GB data, ubegrenset tale og SMS innenfor Norge, og fri roaming i EU.
+
+**Kunde:** Det høres interessant ut. Hvor lenge må jeg binde meg?
+
+**Selger:** **BINDINGSTID:** Det er en bindingstid på 12 måneder. Dette betyr at du forplikter deg til å ha abonnementet i ett år fra startdato. Hvis du skulle ønske å si opp før bindingstiden utløper, vil det påløpe et gebyr tilsvarende resterende måneder ganger 200 kroner.
+
+**Kunde:** Okei, det forstår jeg. Hva med prisen - er det noe som kommer i tillegg?
+
+---
+
+**Tid: 02:00 - 04:00**
+**Selger:** **PRISDETALJER:** La meg være helt transparent om kostnadene:
+- Månedlig abonnement: 449 kroner
+- Oppstartsgebyr: 199 kroner (kun første måned)
+- Hvis du overskrider 20 GB, koster ekstra data 2 kroner per MB
+- Samtaler til utlandet starter på 2,50 kroner per minutt, avhengig av land
+- Premium SMS og tjenester kommer i tillegg
+
+Alle priser er inkludert merverdiavgift. Du vil få full kostnadsoversikt på SMS og e-post før aktivering.
+
+**Kunde:** Det var grundig forklart. Hva skjer hvis jeg ikke er fornøyd?
+
+---
+
+**Tid: 04:00 - 05:30**
+**Selger:** **ANGRERETT:** Du har 14 dagers angrerett fra du mottar SIM-kortet. I denne perioden kan du si opp uten kostnad, bortsett fra eventuelle tjenester du faktisk har brukt. 
+
+**BETENKINGSTID:** Du trenger ikke bestemme deg nå med en gang. Jeg kan sende deg all informasjon på e-post, så kan du tenke over det. Det er ingen tidsbegrensning på tilbudet denne uken.
+
+**Kunde:** Det setter jeg pris på. Jeg vil gjerne se detaljene skriftlig først.
+
+---
+
+**Tid: 05:30 - 06:42**
+**Selger:** Selvfølgelig! Kan jeg få e-postadressen din så sender jeg deg en komplett oversikt?
+
+**Kunde:** Det er anne.hansen@email.no
+
+**Selger:** Tusen takk, Anne. Du vil motta e-posten innen 30 minutter med:
+- Abonnementsdetaljer
+- Fullstendig prisliste  
+- Vilkår og betingelser
+- Kontaktinformasjon for spørsmål
+
+Hvis du bestemmer deg, kan du aktivere abonnementet via lenken i e-posten, eller ringe tilbake til meg på 22334455.
+
+**Kunde:** Perfekt. Takk for god service!
+
+**Selger:** Tusen takk for tiden din, Anne. Ha en fin dag!
+
+---
+
+## COMPLIANCE ANALYSE
+
+### ✅ REGELOPPFØLGING:
+- **Bindingstid klargjort:** Tydelig forklart 12 måneders binding
+- **Priser transparent:** Alle kostnader oppgitt inkl. tillegg
+- **Angrerett informert:** 14 dagers rett nevnt
+- **Ingen press:** Kunde fikk tid til å tenke
+- **Skriftlig bekreftelse:** Tilbud sendes på e-post
+- **GDPR-compliant:** Kun nødvendig informasjon samlet
+
+### 📊 KVALITETSSCORE: 10/10
+- Profesjonell tilnærming
+- Transparent kommunikasjon  
+- Respekterer kundens tid
+- Følger alle norske regler
+
+---
+
+*Analysert av AI Callcenter Agent*
+*Designer: Abdullah Alawiss*
