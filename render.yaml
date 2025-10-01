@@ -2,14 +2,15 @@
 # Deploy with: Blueprint Deploy on Render.com
 
 services:
-  # Backend API Service - FastAPI
+  # Backend API Service - Simple Python Server
   - type: web
     name: ai-callcenter-backend
     env: python
     plan: free
     region: frankfurt
-    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements-basic.txt"
-    startCommand: "cd backend && python app_flask.py"
+    runtime: python-3.11
+    buildCommand: "echo 'No dependencies required - using Python standard library only'"
+    startCommand: "cd backend && python simple_server.py"
     healthCheckPath: /health
     autoDeploy: false
     envVars:
