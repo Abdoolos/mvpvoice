@@ -9,7 +9,7 @@ services:
     plan: free
     region: frankfurt
     runtime: python-3.11
-    buildCommand: "pip install --upgrade pip"
+    buildCommand: ""
     startCommand: "python backend/simple_server.py"
     healthCheckPath: /health
     autoDeploy: false
