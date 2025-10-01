@@ -1,8 +1,8 @@
-# Render Blueprint Configuration for AI Callcenter Agent MVP
+# Render Blueprint Configuration for AI Callcenter Agent MVP - Minimal Version
 # Deploy with: Blueprint Deploy on Render.com
 
 services:
-  # Backend API Service - Simple Python Server
+  # Backend API Service - Simple Python Server ONLY
   - type: web
     name: ai-callcenter-backend
     env: python
@@ -14,29 +14,6 @@ services:
     healthCheckPath: /health
     autoDeploy: false
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: callcenter-db
-          property: connectionString
-      - key: REDIS_URL
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: CELERY_BROKER_URL
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: CELERY_RESULT_BACKEND
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: OPENAI_API_KEY
-        sync: false  # Manual input required
-      - key: ELEVENLABS_API_KEY
-        sync: false  # Manual input required
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
@@ -47,105 +24,5 @@ services:
         value: "AI Callcenter Agent MVP"
       - key: VERSION
         value: "1.0.0"
-      - key: API_V1_STR
-        value: "/api/v1"
-      - key: MAX_AUDIO_DURATION
-        value: "3600"
-      - key: WHISPER_MODEL
-        value: "medium"
-      - key: ENABLE_DATA_REDACTION
-        value: "True"
-      - key: REDACTION_LANGUAGE
-        value: "no"
 
-  # Frontend Service - Next.js
-  - type: web
-    name: ai-callcenter-frontend
-    env: node
-    plan: free
-    region: frankfurt
-    buildCommand: "cd frontend && npm ci && npm run build"
-    startCommand: "cd frontend && npm start"
-    envVars:
-      - key: NODE_ENV
-        value: "production"
-      - key: NEXT_PUBLIC_API_URL
-        fromService:
-          type: web
-          name: ai-callcenter-backend
-          property: host
-      - key: NEXT_PUBLIC_APP_NAME
-        value: "AI Callcenter Agent"
-
-  # Celery Worker Service - Background Tasks
-  - type: worker
-    name: ai-callcenter-worker
-    env: python
-    plan: free
-    region: frankfurt
-    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements-minimal.txt"
-    startCommand: "cd backend && echo 'Celery worker disabled in minimal mode'"
-    envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: callcenter-db
-          property: connectionString
-      - key: REDIS_URL
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: CELERY_BROKER_URL
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: CELERY_RESULT_BACKEND
-        fromService:
-          type: redis
-          name: callcenter-redis
-          property: connectionString
-      - key: OPENAI_API_KEY
-        sync: false  # Manual input required
-      - key: ELEVENLABS_API_KEY
-        sync: false  # Manual input required
-      - key: SECRET_KEY
-        generateValue: true
-      - key: DEBUG
-        value: "False"
-      - key: ENVIRONMENT
-        value: "production"
-      - key: MAX_AUDIO_DURATION
-        value: "3600"
-      - key: WHISPER_MODEL
-        value: "medium"
-      - key: ENABLE_DATA_REDACTION
-        value: "True"
-      - key: REDACTION_LANGUAGE
-        value: "no"
-
-  # Celery Beat Service - Disabled in minimal mode
-  # Uncomment and add celery+redis to requirements when ready
-  # - type: worker
-  #   name: ai-callcenter-beat
-  #   env: python
-  #   plan: free
-  #   region: frankfurt
-  #   buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
-  #   startCommand: "cd backend && celery -A app.core.celery_config beat --loglevel=info"
-
-  # Managed Redis Service
-  - type: redis
-    name: callcenter-redis
-    plan: starter
-    region: frankfurt
-    maxmemoryPolicy: allkeys-lru
-    ipAllowList: []  # Allow all IPs for internal service communication
-
-# Managed Databases
-databases:
-  - name: callcenter-db
-    databaseName: callcenter_db
-    user: callcenter_user
-    plan: free
-    region: frankfurt
+# Designer: Abdullah Alawiss
