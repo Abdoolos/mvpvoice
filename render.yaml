@@ -10,7 +10,6 @@ services:
     region: frankfurt
     runtime: python-3.11
     buildCommand: ""
-    startCommand: "python backend/simple_server.py"
     healthCheckPath: /health
     autoDeploy: false
     envVars:
