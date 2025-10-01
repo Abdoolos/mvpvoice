@@ -6,10 +6,10 @@ services:
   - type: web
     name: ai-callcenter-backend
     env: python
-    plan: starter
+    plan: free
     region: frankfurt
     buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
-    startCommand: "cd backend && alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port $PORT --workers 2"
+    startCommand: "cd backend && alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port $PORT --workers 1"
     healthCheckPath: /health
     autoDeploy: false
     envVars:
@@ -61,7 +61,7 @@ services:
   - type: web
     name: ai-callcenter-frontend
     env: node
-    plan: starter
+    plan: free
     region: frankfurt
     buildCommand: "cd frontend && npm ci && npm run build"
     startCommand: "cd frontend && npm start"
@@ -80,10 +80,10 @@ services:
   - type: worker
     name: ai-callcenter-worker
     env: python
-    plan: starter
+    plan: free
     region: frankfurt
-    buildCommand: "cd backend && pip install -r requirements.txt"
-    startCommand: "cd backend && celery -A app.core.celery_config worker --loglevel=info --concurrency=2"
+    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "cd backend && celery -A app.core.celery_config worker --loglevel=info --concurrency=1"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -127,9 +127,9 @@ services:
   - type: worker
     name: ai-callcenter-beat
     env: python
-    plan: starter
+    plan: free
     region: frankfurt
-    buildCommand: "cd backend && pip install -r requirements.txt"
+    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
     startCommand: "cd backend && celery -A app.core.celery_config beat --loglevel=info"
     envVars:
       - key: DATABASE_URL
@@ -155,7 +155,7 @@ services:
   # Managed Redis Service
   - type: redis
     name: callcenter-redis
-    plan: starter
+    plan: free
     region: frankfurt
     maxmemoryPolicy: allkeys-lru
     ipAllowList: []  # Allow all IPs for internal service communication

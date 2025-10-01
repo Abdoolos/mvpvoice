@@ -4,15 +4,29 @@ Designer: Abdullah Alawiss
 """
 
 from typing import Dict, Any, List
-import torch
-from pyannote.audio import Pipeline
-from pyannote.audio.pipelines.speaker_verification import PretrainedSpeakerEmbedding
+
+# Try to import optional dependencies
+try:
+    import torch
+    from pyannote.audio import Pipeline
+    from pyannote.audio.pipelines.speaker_verification import PretrainedSpeakerEmbedding
+    PYANNOTE_AVAILABLE = True
+except ImportError:
+    PYANNOTE_AVAILABLE = False
+    torch = None
+    Pipeline = None
+    PretrainedSpeakerEmbedding = None
 
 class DiarizationService:
     """Service for speaker diarization using pyannote.audio."""
     
     def __init__(self):
         """Initialize the diarization pipeline."""
+        if not PYANNOTE_AVAILABLE:
+            print("Warning: pyannote.audio not available, using mock implementation")
+            self.pipeline = None
+            return
+            
         try:
             # Initialize pyannote pipeline
             self.pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization")
