@@ -155,7 +155,7 @@ services:
   # Managed Redis Service
   - type: redis
     name: callcenter-redis
-    plan: free
+    plan: starter
     region: frankfurt
     maxmemoryPolicy: allkeys-lru
     ipAllowList: []  # Allow all IPs for internal service communication
