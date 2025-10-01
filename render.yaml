@@ -75,8 +75,6 @@ services:
           property: host
       - key: NEXT_PUBLIC_APP_NAME
         value: "AI Callcenter Agent"
-      - key: NEXT_PUBLIC_DESIGNER
-        value: "Abdullah Alawiss"
 
   # Celery Worker Service - Background Tasks
   - type: worker
@@ -154,6 +152,13 @@ services:
           name: callcenter-redis
           property: connectionString
 
+  # Managed Redis Service
+  - type: redis
+    name: callcenter-redis
+    plan: starter
+    region: frankfurt
+    maxmemoryPolicy: allkeys-lru
+
 # Managed Databases
 databases:
   - name: callcenter-db
@@ -161,11 +166,3 @@ databases:
     user: callcenter_user
     plan: starter
     region: frankfurt
-
-# Managed Redis
-services:
-  - type: redis
-    name: callcenter-redis
-    plan: starter
-    region: frankfurt
-    maxmemoryPolicy: allkeys-lru
