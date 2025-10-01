@@ -1,0 +1,171 @@
+# Render Blueprint Configuration for AI Callcenter Agent MVP
+# Deploy with: Blueprint Deploy on Render.com
+
+services:
+  # Backend API Service - FastAPI
+  - type: web
+    name: ai-callcenter-backend
+    env: python
+    plan: starter
+    region: frankfurt
+    buildCommand: "cd backend && pip install --upgrade pip && pip install -r requirements.txt"
+    startCommand: "cd backend && alembic upgrade head && uvicorn main:app --host 0.0.0.0 --port $PORT --workers 2"
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: callcenter-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_BROKER_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_RESULT_BACKEND
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false  # Manual input required
+      - key: ELEVENLABS_API_KEY
+        sync: false  # Manual input required
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: PROJECT_NAME
+        value: "AI Callcenter Agent MVP"
+      - key: VERSION
+        value: "1.0.0"
+      - key: API_V1_STR
+        value: "/api/v1"
+      - key: MAX_AUDIO_DURATION
+        value: "3600"
+      - key: WHISPER_MODEL
+        value: "medium"
+      - key: ENABLE_DATA_REDACTION
+        value: "True"
+      - key: REDACTION_LANGUAGE
+        value: "no"
+
+  # Frontend Service - Next.js
+  - type: web
+    name: ai-callcenter-frontend
+    env: node
+    plan: starter
+    region: frankfurt
+    buildCommand: "cd frontend && npm ci && npm run build"
+    startCommand: "cd frontend && npm start"
+    envVars:
+      - key: NODE_ENV
+        value: "production"
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: ai-callcenter-backend
+          property: host
+      - key: NEXT_PUBLIC_APP_NAME
+        value: "AI Callcenter Agent"
+      - key: NEXT_PUBLIC_DESIGNER
+        value: "Abdullah Alawiss"
+
+  # Celery Worker Service - Background Tasks
+  - type: worker
+    name: ai-callcenter-worker
+    env: python
+    plan: starter
+    region: frankfurt
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && celery -A app.core.celery_config worker --loglevel=info --concurrency=2"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: callcenter-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_BROKER_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_RESULT_BACKEND
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: OPENAI_API_KEY
+        sync: false  # Manual input required
+      - key: ELEVENLABS_API_KEY
+        sync: false  # Manual input required
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ENVIRONMENT
+        value: "production"
+      - key: MAX_AUDIO_DURATION
+        value: "3600"
+      - key: WHISPER_MODEL
+        value: "medium"
+      - key: ENABLE_DATA_REDACTION
+        value: "True"
+      - key: REDACTION_LANGUAGE
+        value: "no"
+
+  # Optional: Celery Beat Service for Scheduled Tasks
+  - type: worker
+    name: ai-callcenter-beat
+    env: python
+    plan: starter
+    region: frankfurt
+    buildCommand: "cd backend && pip install -r requirements.txt"
+    startCommand: "cd backend && celery -A app.core.celery_config beat --loglevel=info"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: callcenter-db
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_BROKER_URL
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+      - key: CELERY_RESULT_BACKEND
+        fromService:
+          type: redis
+          name: callcenter-redis
+          property: connectionString
+
+# Managed Databases
+databases:
+  - name: callcenter-db
+    databaseName: callcenter_db
+    user: callcenter_user
+    plan: starter
+    region: frankfurt
+
+# Managed Redis
+services:
+  - type: redis
+    name: callcenter-redis
+    plan: starter
+    region: frankfurt
+    maxmemoryPolicy: allkeys-lru
