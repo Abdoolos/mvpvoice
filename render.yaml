@@ -158,6 +158,7 @@ services:
     plan: starter
     region: frankfurt
     maxmemoryPolicy: allkeys-lru
+    ipAllowList: []  # Allow all IPs for internal service communication
 
 # Managed Databases
 databases:
