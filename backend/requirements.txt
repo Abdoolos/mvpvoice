@@ -44,6 +44,6 @@ sentry-sdk[fastapi]==1.38.0
 
 # Essential dependencies only for free tier compatibility
 requests==2.31.0
-numpy==1.24.3
+# numpy==1.24.3  # Commented out due to Python 3.13 compatibility issues
 
 # Designer: Abdullah Alawiss
