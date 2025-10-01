@@ -1,0 +1,19 @@
+# Ignore frontend folder for Railway deployment
+frontend/
+frontend/**
+ops/
+docs/
+data/
+voicemvp/
+
+# Ignore development files
+*.pyc
+__pycache__/
+.env
+.venv/
+venv/
+.git/
+.gitignore
+*.log
+
+# Designer: Abdullah Alawiss
