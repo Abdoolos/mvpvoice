@@ -9,8 +9,8 @@ services:
     plan: free
     region: frankfurt
     runtime: python-3.11
-    buildCommand: "echo 'No dependencies required - using Python standard library only'"
-    startCommand: "cd backend && python simple_server.py"
+    buildCommand: "pip install --upgrade pip"
+    startCommand: "python backend/simple_server.py"
     healthCheckPath: /health
     autoDeploy: false
     envVars:
