@@ -97,7 +97,10 @@ export function Sidebar() {
                 onError={(e) => {
                   // Fallback to initials if image fails to load
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'flex';
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (nextElement) {
+                    nextElement.style.display = 'flex';
+                  }
                 }}
               />
               <div className="h-8 w-8 rounded-full bg-primary-600 flex items-center justify-center" style={{display: 'none'}}>
