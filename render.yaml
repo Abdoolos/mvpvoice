@@ -165,5 +165,5 @@ databases:
   - name: callcenter-db
     databaseName: callcenter_db
     user: callcenter_user
-    plan: starter
+    plan: free
     region: frankfurt
