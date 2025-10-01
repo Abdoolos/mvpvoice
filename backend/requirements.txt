@@ -13,7 +13,7 @@ redis==5.0.1
 celery==5.3.4
 
 # Audio processing (lightweight alternatives)
-openai-whisper==20231117
+# openai-whisper==20231117  # Commented out due to Python 3.13 compatibility issues
 ffmpeg-python==0.2.0
 # Note: Using OpenAI API for audio processing instead of local whisper
 # pyannote.audio==3.1.1  # Commented out due to memory requirements

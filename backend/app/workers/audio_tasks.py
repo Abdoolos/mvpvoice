@@ -18,13 +18,9 @@ from ..services.audio_service import AudioService
 from ..services.diarization_service import DiarizationService
 from ..core.config import settings
 
-# Try to import whisper as fallback
-try:
-    import whisper
-    WHISPER_AVAILABLE = True
-except ImportError:
-    WHISPER_AVAILABLE = False
-    whisper = None
+# Whisper local import disabled due to Python 3.13 compatibility
+WHISPER_AVAILABLE = False
+whisper = None
 
 @celery_app.task(bind=True, name="process_audio_file")
 def process_audio_file(self, call_id: int) -> Dict[str, Any]:
