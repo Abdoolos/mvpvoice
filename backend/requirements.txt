@@ -1,6 +1,6 @@
-# FastAPI and web framework
+# FastAPI and web framework (minimal)
 fastapi==0.104.1
-uvicorn[standard]==0.24.0
+uvicorn==0.24.0
 python-multipart==0.0.6
 
 # Database
@@ -14,7 +14,7 @@ celery==5.3.4
 
 # Audio processing (lightweight alternatives)
 # openai-whisper==20231117  # Commented out due to Python 3.13 compatibility issues
-ffmpeg-python==0.2.0
+# ffmpeg-python==0.2.0  # Commented out due to potential Rust dependencies
 # Note: Using OpenAI API for audio processing instead of local whisper
 # pyannote.audio==3.1.1  # Commented out due to memory requirements
 
@@ -30,17 +30,17 @@ python-dotenv==1.0.0
 # python-jose[cryptography]==3.3.0  # Commented out due to Rust dependency issues
 # passlib[bcrypt]==1.7.4  # Commented out due to Rust dependency issues
 
-# Utilities
+# Utilities (minimal)
 pydantic==2.5.0
-httpx==0.25.2
+# httpx==0.25.2  # Commented out due to potential Rust dependencies
 aiofiles==23.2.1
 
 # GDPR and data handling (lightweight alternatives)
 # presidio-analyzer==2.2.353  # Commented out due to memory requirements
 # presidio-anonymizer==2.2.353  # Commented out due to memory requirements
 
-# Monitoring
-sentry-sdk[fastapi]==1.38.0
+# Monitoring (simplified)
+# sentry-sdk[fastapi]==1.38.0  # Commented out due to potential Rust dependencies
 
 # Essential dependencies only for free tier compatibility
 requests==2.31.0
