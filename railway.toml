@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+root = "backend"
+startCommand = "python simple_server.py"
+
+# Designer: Abdullah Alawiss
